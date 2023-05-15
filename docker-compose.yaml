@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  web:
+    build: .
+    container_name: py-web
+    restart: always
+    ports:
+      - "5555:5000"
+    depends_on:
+      - mysql
+    environment:
+      - "APP_ENV=production"
+    command: python run.py
+    networks:
+      - py-network
+
+  mysql:
+    image: mysql:5.7.18
+    container_name: py-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - "MYSQL_ROOT_PASSWORD=123456"
+      - "MYSQL_DATABASE=mysql_db"
+      - "TZ=Asia/Shanghai"
+    volumes:
+      - ./docker/mysql/datadir:/var/lib/mysql
+    restart: always
+    networks:
+      - py-network
+
+networks:
+  py-network:
+    driver: bridge

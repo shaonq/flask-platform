@@ -1,0 +1,13 @@
+{
+  "name": "flask-platform",
+  "version": "1.0.0",
+  "main": "app/run.py",
+  "repository": "",
+  "author": "shaonq <shaonq@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "pack": " npm version patch && yarn pack",
+    "dev:py": "python app/run.py",
+    "docker": "docker-compose up -d --build"
+  }
+}
