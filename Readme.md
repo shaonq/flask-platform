@@ -16,7 +16,7 @@
 - `pip freeze>app/requirements.txt`
 - `pip uninstall -r app/requirements.txt -y`
 
-### Install ALl
+### Install All
 
 - `python -m pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/`
 
