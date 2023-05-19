@@ -46,4 +46,6 @@ SQLAlchemy==2.0.13
 
 - `install docker`
 - production  `docker-compose up -d --build`
+- ` ------ prot: 5555`
 - development   `pip install -r app/requirements.txt -i https://mirrors.aliyun.com/pypi/simple/ && python app/run.py`
+- ` ------ prot: 5000`
